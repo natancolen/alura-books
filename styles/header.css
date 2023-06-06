@@ -1,17 +1,18 @@
-.container{
-    display: flex;
-    align-items: center;
-}
-
-.container__imagem{
-    padding: 1em;
-}
-
 .cabecalho{
     background-color: var(--cor-branco);
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: relative;
+}
+
+.container{
+    display: flex;
+    align-items: center;
+}
+
+.container__botao:checked ~ .lista-menu{
+    display: block;
 }
 
 .cabecalho__menu-hambuger{
@@ -22,3 +23,25 @@
     background-position: center;
     display: inline-block;
 }
+
+.container__imagem{
+    padding: 1em;
+}
+
+.lista-menu{
+    display: none;
+    position: absolute;
+    top: 100%;
+}
+
+/* .lista-menu__titulo{
+
+}
+
+.lista-menu__item{
+
+}
+
+.lista-menu__link{
+
+} */
