@@ -47,6 +47,9 @@
 
     <!-- Slider main container -->
     <div class="swiper">
+        <!-- If we need pagination -->
+        <div class="swiper-pagination"></div>
+
         <!-- Additional required wrapper -->
         <div class="swiper-wrapper">
             <!-- Slides -->
@@ -54,19 +57,36 @@
             <div class="swiper-slide"> <img src="assets/images/svg/Liderança.svg" alt="Livro sobre liderança em design da alura books"> </div>
             <div class="swiper-slide"> <img src="assets/images/svg/Javascript.svg" alt="Livro sobre javascript assertivo da alura books"> </div>
 
-            <div class="swiper-slide"> <img src="Guia Front-end.svg" alt="Livro Guia Front end"> </div>
+            <div class="swiper-slide"> <img src="assets/images/svg/Guia Front-end.svg" alt="Livro Guia Front end"> </div>
+            <div class="swiper-slide"> <img src="assets/images/svg/Portugol.svg" alt="Livro sobre Portugol"> </div>
+            <div class="swiper-slide"> <img src="assets/images/svg/Acessibilidade.svg" alt="Livro sobre accessibilade"> </div>
         </div>
-        <!-- If we need pagination -->
-        <div class="swiper-pagination"></div>
 
         <!-- If we need navigation buttons -->
         <div class="swiper-button-prev"></div>
         <div class="swiper-button-next"></div>
-
-        <!-- If we need scrollbar -->
-        <div class="swiper-scrollbar"></div>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script>
+        const swiper = new Swiper('.swiper', {
+            slidesPerView: 3,
+            spaceBetween: 5,
+            // Optional parameters
+            direction: 'horizontal',
+            loop: false,
+
+            // If we need pagination
+            pagination: {
+                el: '.swiper-pagination',
+            },
+
+            // And if we need scrollbar
+            scrollbar: {
+                el: '.swiper-scrollbar',
+            },
+        });
+    </script>
+
 </body>
 </html>
